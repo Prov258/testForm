@@ -1,0 +1,180 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  background-color: #615f5f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+textarea,
+input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border: 3px solid #ff7300;
+  font-size: 19px;
+  color: gray;
+  margin-bottom: 30px;
+}
+
+textarea._err,
+input._err {
+  border-color: #e60202;
+}
+
+textarea._err ~ .input-error-message,
+input._err ~ .input-error-message {
+  opacity: 1;
+  visibility: visible;
+}
+
+textarea {
+  resize: none;
+}
+
+.form {
+  max-width: 800px;
+  width: 100%;
+  padding: 50px;
+  background-color: #000;
+  border: 5px solid #ff7300;
+  position: relative;
+}
+
+.form::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.9) url("../img/dark-loader.gif") center/80px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.form._sending {
+  opacity: 1;
+  visibility: visible;
+}
+
+.label {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.input {
+  height: 45px;
+}
+
+.textarea {
+  height: 120px;
+}
+
+.btn {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 4px solid #ff7300;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.btn:hover {
+  background-color: #b3b3b3;
+}
+
+.input-error-message {
+  position: absolute;
+  color: #e60202;
+  left: 0;
+  top: calc(100% + 5px);
+  opacity: 0;
+  visibility: hidden;
+}

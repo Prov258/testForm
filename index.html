@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Forms</title>
+</head>
+<body>
+
+    <form action="#" class="form" method="POST" novalidate>
+        
+        <label class="label">
+            <input type="text" placeholder="Ваше имя" name="name" class="input _req">
+            <span class="input-error-message">Это поле должно быть заполнено.</span>
+        </label>
+
+        <label class="label">
+            <input type="email" placeholder="Ваш email" name="email" class="input _req">
+            <span class="input-error-message">Это поле должно быть заполнено.</span>
+        </label>
+
+        <label class="label">
+            <input type="tel" placeholder="Ваш номер телефона" name="Phone number" class="input _req">
+            <span class="input-error-message">Это поле должно быть заполнено.</span>
+        </label>
+
+        <textarea name="commentary" placeholder="Ваш комментарий" class="textarea"></textarea>
+
+        <button type="submit" class="btn">Отправить</button>
+    </form>
+
+    <script src="source/script.js"></script>
+</body>
+</html>
